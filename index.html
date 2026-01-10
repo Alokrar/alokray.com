@@ -1,0 +1,120 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>alokray.com — Alok</title>
+  <meta name="description" content="Personal website for Alok — developer, creator, tinkerer." />
+  <style>
+    :root {
+      --bg: #0f1724;
+      --card: #0b1220;
+      --muted: #9aa4b2;
+      --accent: #7dd3fc;
+      --glass: rgba(255,255,255,0.03);
+      --radius: 14px;
+      font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+      color-scheme: dark;
+    }
+    html,body{height:100%}
+    body {
+      margin:0;
+      background: linear-gradient(180deg,#071029 0%, #071b2b 100%);
+      color: #e6eef8;
+      -webkit-font-smoothing:antialiased;
+      -moz-osx-font-smoothing:grayscale;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      padding:32px;
+    }
+    .card {
+      width:100%;
+      max-width:900px;
+      background: linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));
+      border-radius: var(--radius);
+      box-shadow: 0 6px 30px rgba(2,6,23,0.6);
+      padding:36px;
+      display:flex;
+      gap:28px;
+      align-items:center;
+      backdrop-filter: blur(6px);
+    }
+    .avatar {
+      flex:0 0 120px;
+      height:120px;
+      border-radius:16px;
+      background:linear-gradient(135deg,var(--accent),#60a5fa);
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      font-weight:700;
+      font-size:28px;
+      color:#042028;
+      box-shadow: 0 6px 20px rgba(0,0,0,0.6);
+    }
+    .content { flex:1 }
+    h1 {
+      margin:0 0 6px 0;
+      font-size:28px;
+      letter-spacing:-0.3px;
+    }
+    p.lead {
+      margin:0 0 14px 0;
+      color:var(--muted);
+    }
+    .links {
+      display:flex;
+      gap:10px;
+      flex-wrap:wrap;
+      margin-top:10px;
+    }
+    .btn {
+      display:inline-block;
+      padding:8px 12px;
+      border-radius:10px;
+      text-decoration:none;
+      color:inherit;
+      background:var(--glass);
+      border: 1px solid rgba(255,255,255,0.03);
+      font-size:14px;
+    }
+    footer {
+      margin-top:18px;
+      color:var(--muted);
+      font-size:13px;
+    }
+    @media (max-width:640px){
+      .card { flex-direction:column; align-items:flex-start; padding:20px }
+      .avatar { width:96px; height:96px; font-size:22px }
+    }
+  </style>
+</head>
+<body>
+  <main class="card" role="main">
+    <div class="avatar" aria-hidden="true">AR</div>
+    <div class="content">
+      <h1>Hi — I’m Alok</h1>
+      <p class="lead">Developer. Builder. Curious about web, tooling, and neat little projects. This is a simple placeholder homepage for alokray.com.</p>
+
+      <div class="links" role="navigation" aria-label="Quick links">
+        <a class="btn" href="https://github.com/Alokrar" target="_blank" rel="noopener">GitHub</a>
+        <a class="btn" href="#" id="projectsLink">Projects</a>
+        <a class="btn" href="mailto:hello@alokray.com">Contact</a>
+      </div>
+
+      <footer>
+        <div>Want this live? I can push to your repo and set up GitHub Pages. Reply with the branch (e.g. <code>gh-pages</code>) and if you want a CNAME for a custom domain.</div>
+      </footer>
+    </div>
+  </main>
+
+  <script>
+    // Small client-side enhancements (optional)
+    document.getElementById('projectsLink').addEventListener('click', function (e) {
+      e.preventDefault();
+      alert('Replace this with a link to your projects or repository list.');
+    });
+  </script>
+</body>
+</html>
